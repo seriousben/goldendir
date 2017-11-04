@@ -23,7 +23,9 @@ func (t *noopT) FailNow() {
 
 func TestActualPathnameFails(t *testing.T) {
 	tmpPathnames := getPathnames
-	getPathnames = func(dirpath string) ([]string, error) { return []string{}, errors.New("getPathnames error") }
+	getPathnames = func(dirpath string) ([]string, error) {
+		return []string{}, errors.New("getPathnames error")
+	}
 	defer func() { getPathnames = tmpPathnames }()
 	nt := noopT{}
 	success := Assert(&nt, ".", ".", "")
