@@ -30,7 +30,7 @@ func addEol(pathnames []string) []string {
 
 // Assert compares the actual dir to the expected content in the golden dir.
 // Returns whether the assertion was successful (true) or not (false)
-func Assert(t require.TestingT, actualDir string, expectedDir string, msgAndArgs ...interface{}) bool {
+func Assert(t require.TestingT, actualDir, expectedDir string, msgAndArgs ...interface{}) bool {
 	actualPathnames, err := getPathnames(actualDir)
 	if err != nil {
 		require.NoError(t, err, msgAndArgs...)

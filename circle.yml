@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Install Dependencies"
           command: |
-            dockerfile=dobifiles/Dockerfile
+            dockerfile=dockerfiles/Dockerfile
             echo "COPY . ." >> $dockerfile
             docker build -f $dockerfile --tag cli-builder:$CIRCLE_BUILD_NUM .
             docker run --name \
@@ -29,7 +29,7 @@ jobs:
       - run:
           name: "Lint"
           command: |
-            dockerfile=dobifiles/Dockerfile.lint
+            dockerfile=dockerfiles/Dockerfile.lint
             echo "COPY . ." >> $dockerfile
             docker build -f $dockerfile --tag cli-linter:$CIRCLE_BUILD_NUM .
             docker run --rm cli-linter:$CIRCLE_BUILD_NUM
@@ -42,7 +42,7 @@ jobs:
       - run:
           name: "Unit Test GO 1.9"
           command: |
-            dockerfile=dobifiles/Dockerfile
+            dockerfile=dockerfiles/Dockerfile
             echo "COPY . ." >> $dockerfile
             docker build -f $dockerfile --tag cli-builder:$CIRCLE_BUILD_NUM .
             docker run --name \
@@ -57,7 +57,7 @@ jobs:
       - run:
           name: "Unit Test GO 1.8"
           command: |
-            dockerfile=dobifiles/Dockerfile
+            dockerfile=dockerfiles/Dockerfile
             sed -i -e 's/FROM\s\+golang.*/FROM golang:1.8.3-alpine/' $dockerfile
             echo "COPY . ." >> $dockerfile
             docker build -f $dockerfile --tag cli-builder:$CIRCLE_BUILD_NUM .
