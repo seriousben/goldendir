@@ -3,7 +3,7 @@
 A package compatible with `go test` to support golden file testing patterns but on directories.
 
 [![GoDoc](https://godoc.org/github.com/seriousben/goldendir?status.svg)](https://godoc.org/github.com/seriousben/goldendir)
-[![CircleCI](https://circleci.com/gh/seriousben/seriousben/tree/master.svg?style=shield)](https://circleci.com/gh/seriousben/goldendir/tree/master)
+[![CircleCI](https://circleci.com/gh/seriousben/goldendir/tree/master.svg?style=shield)](https://circleci.com/gh/seriousben/goldendir/tree/master)
 [![Go Reportcard](https://goreportcard.com/badge/github.com/seriousben/goldendir)](https://goreportcard.com/report/github.com/seriousben/goldendir)
 
 ## Related
