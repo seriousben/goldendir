@@ -2,7 +2,7 @@
   "Vendor": true,
   "Deadline": "2m",
   "Sort": ["linter", "severity", "path"],
-  "Exclude": [],
+  "Exclude": ["example_test\\.go"],
 
   "Enable": [
     "deadcode",
@@ -25,4 +25,3 @@
   "Cyclo": 10,
   "LineLength": 100
 }
-
