@@ -164,13 +164,15 @@ func TestAssertFailExtraFiles(t *testing.T) {
 func TestAssertFailDifferentContent(t *testing.T) {
 	nt := new(noopT)
 
-	expectedDir := fs.NewDir(t, "expected", fs.WithFile("file1", "content\n"))
+	expectedDir := fs.NewDir(t, "expected", fs.WithFile("file1", "content\nfoo\n"))
 	defer expectedDir.Remove()
 
-	actualDir := fs.NewDir(t, "actual", fs.WithFile("file1", "foo\n"))
+	actualDir := fs.NewDir(t, "actual", fs.WithFile("file1", "content\nbar\n"))
 	defer actualDir.Remove()
 
 	Assert(nt, actualDir.Path(), expectedDir.Path())
 	assert.True(t, nt.failed, "fail for different content")
 	assert.True(t, containsMatch(nt.errors, "~ file1"), "different file1")
+	assert.True(t, containsMatch(nt.errors, "-foo"), "file1 has missing content")
+	assert.True(t, containsMatch(nt.errors, "+bar"), "file1 has added content")
 }
