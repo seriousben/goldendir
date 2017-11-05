@@ -5,10 +5,11 @@ A package compatible with `go test` to support golden file testing patterns but 
 [![GoDoc](https://godoc.org/github.com/seriousben/goldendir?status.svg)](https://godoc.org/github.com/seriousben/goldendir)
 [![CircleCI](https://circleci.com/gh/seriousben/goldendir/tree/master.svg?style=shield)](https://circleci.com/gh/seriousben/goldendir/tree/master)
 [![Go Reportcard](https://goreportcard.com/badge/github.com/seriousben/goldendir)](https://goreportcard.com/report/github.com/seriousben/goldendir)
+[![codecov](https://codecov.io/gh/seriousben/goldendir/branch/master/graph/badge.svg)](https://codecov.io/gh/seriousben/goldendir)
 
 ## Detailed Output
 
-`goldendir`` makes it easy to spot differences.
+`goldendir` makes it easy to spot differences.
 
 For example:
 ```console

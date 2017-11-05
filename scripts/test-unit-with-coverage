@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -eu -o pipefail
+
+pkgs=${@:-$(go list ./... | grep -v '/vendor/')}
+
+echo "" > coverage.txt
+
+for pkg in $pkgs; do
+    go test -coverprofile=profile.out -covermode=atomic "$pkg"
+    if [ -f profile.out ]; then
+        cat profile.out >> coverage.txt
+        rm profile.out
+    fi
+done
