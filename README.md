@@ -8,7 +8,7 @@ A package compatible with `go test` to support golden file testing patterns but 
 
 ## Related
 
-* [gotestyourself/golden](https://godoc.org/github.com/gotestyourself/gotestyourself/golden)
+* [gotestyourself/golden](https://godoc.org/github.com/gotestyourself/gotestyourself/golden) - compare large multi-line strings
 * [testify/assert](https://godoc.org/github.com/stretchr/testify/assert) and 
   [testify/require](https://godoc.org/github.com/stretchr/testify/require) -
   assertion libraries with common assertions

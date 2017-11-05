@@ -8,6 +8,12 @@
   version = "v1.1.0"
 
 [[projects]]
+  name = "github.com/gotestyourself/gotestyourself"
+  packages = ["fs"]
+  revision = "5aac0d55ecf82c21113b05a175041f7a24a56ce7"
+  version = "v1.2.0"
+
+[[projects]]
   name = "github.com/karrick/godirwalk"
   packages = ["."]
   revision = "544981fb2778aae847d953fdfc624ec55950815f"
@@ -34,6 +40,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "43c536830af4e5188896428143e23ccc6c1e17906dbb60b55a06591a58155d5e"
+  inputs-digest = "1fcc0c53a495296bcbac40ebafae98c1b0800cdd7f2ea783163be41f6eb2aca7"
   solver-name = "gps-cdcl"
   solver-version = 1
